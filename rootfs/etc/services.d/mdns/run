@@ -4,4 +4,4 @@
 # ==============================================================================
 interface=$(awk '{for (i=1; i<=NF; i++) if ($i~/dev/) print $(i+1)}' <<< "$(ip route get 8.8.8.8)")
 
-exec mdns-repeater -f -b ${HASSIO_NETWORK} ${interface} hassio
+exec mdns-repeater -f ${interface} hassio
