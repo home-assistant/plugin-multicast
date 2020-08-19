@@ -8,7 +8,7 @@
     "i386": "homeassistant/i386-base:3.12"
   },
   "args": {
-    "MDNS_REPEATER_VERSION": "1.1.0"
+    "MDNS_REPEATER_VERSION": "1.1.1"
   },
   "labels": {
     "io.hass.type": "multicast"
