@@ -10,7 +10,7 @@ codenotary:
   signer: notary@home-assistant.io
   base_image: notary@home-assistant.io
 args:
-  MDNS_REPEATER_VERSION: 1.1.2
+  MDNS_REPEATER_VERSION: 1.2.0
 labels:
   io.hass.type: multicast
   org.opencontainers.image.source: https://github.com/home-assistant/plugin-multicast

@@ -3,4 +3,4 @@
 # Start mDNS repeater service
 # ==============================================================================
 
-exec mdns-repeater -f ${ACTIVE_INTERFACE} hassio docker0
+exec mdns-repeater -f hassio
