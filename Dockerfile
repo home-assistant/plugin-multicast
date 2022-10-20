@@ -6,7 +6,9 @@ SHELL ["/bin/ash", "-o", "pipefail", "-c"]
 RUN \
     apk add --no-cache --virtual .build-deps \
         build-base \
-        git
+        git \
+        linux-headers \
+        bash
 
 ARG MDNS_REPEATER_VERSION
 RUN \
