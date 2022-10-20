@@ -19,4 +19,14 @@ RUN \
     && rm -rf \
         /usr/src/mdns
 
+ARG PIMD_VERSION
+RUN \
+    git clone -b ${PIMD_VERSION} --depth 1 \
+        https://github.com/troglobit/pimd /usr/src/pimd \
+    && cd /usr/src/pimd \
+    && ./autogen.sh \
+    && ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+    && make install \
+    && rm -rf /usr/src/pimd
+
 COPY rootfs /
