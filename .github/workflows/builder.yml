@@ -11,6 +11,7 @@ on:
     - Dockerfile
     - build.yaml
     - 'rootfs/**'
+  workflow_dispatch:
 
 env:
   BUILD_NAME: multicast
