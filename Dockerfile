@@ -25,7 +25,8 @@ RUN \
         https://github.com/troglobit/pimd /usr/src/pimd \
     && cd /usr/src/pimd \
     && ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
-    && make install \
+    && make \
+    && cp -av ./pimd /usr/bin/ \
     && rm -rf /usr/src/pimd
 
 RUN \
