@@ -25,7 +25,7 @@ RUN \
     git clone -b ${PIMD_VERSION} --depth 1 \
         https://github.com/troglobit/pimd /usr/src/pimd \
     && cd /usr/src/pimd \
-    && ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+    && bash ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
     && make install \
     && rm -rf /usr/src/pimd
 
