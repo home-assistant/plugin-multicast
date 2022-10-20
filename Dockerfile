@@ -7,8 +7,7 @@ RUN \
     apk add --no-cache --virtual .build-deps \
         build-base \
         git \
-        linux-headers \
-        bash
+        linux-headers
 
 ARG MDNS_REPEATER_VERSION
 RUN \
@@ -25,7 +24,7 @@ RUN \
     git clone -b ${PIMD_VERSION} --depth 1 \
         https://github.com/troglobit/pimd /usr/src/pimd \
     && cd /usr/src/pimd \
-    && bash ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
+    && ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
     && make install \
     && rm -rf /usr/src/pimd
 
