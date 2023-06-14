@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bashio
 # ==============================================================================
-# Start mDNS repeater service
+# Start pimd
 # ==============================================================================
 
-exec mdns-repeater -f hassio
+exec pimd -f
