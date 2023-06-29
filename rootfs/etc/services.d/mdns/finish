@@ -12,3 +12,4 @@ if [[ "${APP_EXIT_CODE}" -ne 0 ]] && [[ "${APP_EXIT_CODE}" -ne 256 ]]; then
 fi
 
 bashio::log.info "Service restart after closing"
+
