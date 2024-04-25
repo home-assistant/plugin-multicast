@@ -27,7 +27,7 @@ jobs:
       publish: ${{ steps.version.outputs.publish }}
     steps:
     - name: Checkout the repository
-      uses: actions/checkout@v4.1.3
+      uses: actions/checkout@v4.1.4
       with:
         fetch-depth: 0
 
@@ -54,7 +54,7 @@ jobs:
         arch: ${{ fromJson(needs.init.outputs.architectures) }}
     steps:
     - name: Checkout the repository
-      uses: actions/checkout@v4.1.3
+      uses: actions/checkout@v4.1.4
    
     - name: Login to GitHub Container Registry
       if: needs.init.outputs.publish == 'true'
@@ -85,7 +85,7 @@ jobs:
     steps:
     - name: Checkout the repository
       if: needs.init.outputs.publish == 'true'
-      uses: actions/checkout@v4.1.3
+      uses: actions/checkout@v4.1.4
 
     - name: Initialize git
       if: needs.init.outputs.publish == 'true'
